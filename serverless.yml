@@ -44,6 +44,12 @@ functions:
       - http:
           path: /items/{id}
           method: get
+  updateItem:
+    handler: src/updateItem.handler
+    events:
+      - http:
+          path: /items/{id}
+          method: put
 
 resources:
   Resources:
