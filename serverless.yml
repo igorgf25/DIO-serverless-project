@@ -26,6 +26,24 @@ functions:
       - httpApi:
           path: /
           method: get
+  insertItem:
+    handler: src/insertItem.handler
+    events:
+      - http:
+          path: /item
+          method: post
+  fetchItems:
+    handler: src/fetchItems.handler
+    events:
+      - http:
+          path: /items
+          method: get
+  fetchItem:
+    handler: src/fetchItem.handler
+    events:
+      - http:
+          path: /items/{id}
+          method: get
 
 resources:
   Resources:
